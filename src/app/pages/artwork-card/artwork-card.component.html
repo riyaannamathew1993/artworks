@@ -1,0 +1,25 @@
+
+<mat-card class="card">
+    <mat-card-header>
+    </mat-card-header>
+    <img mat-card-image src="https://www.artic.edu/iiif/2/{{artwork['image_id']}}/full/843,/0/default.jpg" alt="Photo of a Shiba Inu" width="100px" class="header-image">
+    <h2>
+        {{ artwork['title'] }}
+    </h2>
+    <p class="highlight">
+        {{ artwork['artist_title'] }}
+    </p>
+     <div *ngIf="artwork['date_start'] === artwork['date_end']"> 
+        {{artwork['place_of_origin']}} ({{ artwork['date_start']}}) 
+    </div> 
+    <div *ngIf="artwork['date_start'] !== artwork['date_end']"> 
+        {{artwork['place_of_origin']}}  ({{ artwork['date_start']}} - {{artwork['date_end']}})
+    </div> 
+    <div *ngIf="!artwork['date_start'] || !artwork['date_end']"> 
+        {{artwork['place_of_origin']}}
+    </div> 
+    <div>
+        {{artwork['material_titles']}}
+    </div>
+</mat-card>
+

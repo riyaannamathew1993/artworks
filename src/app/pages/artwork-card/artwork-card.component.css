@@ -1,0 +1,29 @@
+.card {
+    width: 400px;
+    height: 350px;
+
+}
+.header-image {
+    background-size: cover;
+    width: 213px;
+    height: 137px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+  
+.row {
+    text-align: center;
+    height: 28px;
+}
+
+.highlight {
+    font-weight: 500;
+    font-size:13px;
+}
+
+.example-additional-selection {
+    opacity: 0.75;
+    font-size: 0.75em;
+}
+

@@ -1,0 +1,55 @@
+.mat-grid-list {
+    width: 100%;
+}
+
+.pagination {
+    color: white;
+    font-size: 15px;
+    background: rgb(34, 59, 69);
+}
+
+.mat-grid-tile {
+      width: 100%;
+      overflow: visible;
+      margin-bottom: 25px;
+}
+
+.sort-by {
+    padding-right: 10px;
+}
+
+.secondary-toolbar {
+    margin-left: 0;
+    width: 100%;
+    background: rgb(34, 59, 69);
+    padding:25px;
+}
+
+.mat-button-wrapper {
+   color: white!important;
+}
+  
+.app-toggle-sort {
+      margin-left: 10px;
+}
+
+.divider {
+    text-align: center;
+}
+  
+.center {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+}
+
+.header-title {
+    text-align: center;
+    font-weight: bold;
+    font-size: 40px;
+    margin: 20px;
+    padding: 20px;
+
+}
+

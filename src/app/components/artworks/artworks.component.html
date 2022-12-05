@@ -1,0 +1,32 @@
+<ng-container *ngIf="isLoading; else elseTemplate">
+    <app-loading-spinner [showSpinner]="isLoading"></app-loading-spinner>
+</ng-container>
+<ng-template #elseTemplate>
+    <h1 class="header-title">ART COLLECTIONS</h1>
+    <div class="row secondary-toolbar">
+        <div class="col divider">  
+        </div>
+        <div class="col divider">
+            <span class="sort-by">Sort By:</span> 
+            <app-toggle-sort (valueChange)="sortToggleEventHandler($event)"></app-toggle-sort>
+        </div>
+    </div>
+    <mat-grid-list cols="3" rowHeight="1.5:1" gutterSize="10px">
+        <mat-grid-tile class="tile"
+          *ngFor="let artwork of searchedArtWorks | slice: firstIndex: lastIndex"
+        >
+          <div class="container d-flex justify-content-center">
+            <app-artwork-card [artwork]="artwork"></app-artwork-card>
+          </div>
+        </mat-grid-tile>
+      </mat-grid-list>
+      <mat-paginator
+      class="col pagination"
+      [length]="artworks?.length"
+      [pageSize]="numberOfArtworksPerPage"
+      (page)="updateGrid($event)"
+    >
+    </mat-paginator>
+</ng-template>
+
+
